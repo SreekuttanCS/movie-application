@@ -9,7 +9,6 @@ function MovieDetail() {
 
   useEffect(() => {
     const detailMovie = async () => {
-      console.log("hii");
       const response = await fetch(`${api_detail}&i=${id}`);
       const desc = await response.json();
       setGetMovie(desc);
@@ -29,6 +28,7 @@ function MovieDetail() {
         <div className="close-btn">
           <button onClick={BackButton}>X</button>
         </div>
+
         <img src={getMovie.Poster} alt="" />
         <h2 className="heading">{getMovie.Title}</h2>
         <h3>
